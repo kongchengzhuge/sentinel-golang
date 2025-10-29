@@ -181,6 +181,10 @@ func (c *LRU) Len() int {
 	return c.evictList.Len()
 }
 
+func (c *LRU) Size() int {
+	return c.size
+}
+
 // Resize changes the cache size.
 func (c *LRU) Resize(size int) (evicted int) {
 	diff := c.Len() - size
