@@ -181,6 +181,10 @@ func (c *LRU) Len() int {
 	return c.evictList.Len()
 }
 
+func (c *LRU) Back() *list.Element {
+	return c.evictList.Back()
+}
+
 func (c *LRU) Size() int {
 	return c.size
 }
